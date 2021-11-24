@@ -1,0 +1,33 @@
+.overView {
+  width: 100%;
+  display: flex;
+  padding: 1em;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.overView--responsive {
+  /* width: 23% !important; */
+  margin-top: 1em;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  /* display: flex;
+  justify-content: center;
+  align-self: center; */
+  height: 10em;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+}
+
+.overView--responsive > h1 {
+  margin-top: 0.5em;
+}
+.overView--responsive span {
+  font-weight: 500;
+  font-size: 18px;
+}
+.overView--responsive h2 {
+  font-weight: 500;
+  text-align: center;
+}

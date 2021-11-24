@@ -1,0 +1,54 @@
+/* .navbar {
+  width: 100%;
+}
+.navbar-collapsee {
+  display: flex;
+  justify-content: flex-end;
+} */
+.navbar-header__end {
+  max-width: 200px;
+  line-height: 24px;
+  color: white;
+  background-color: #324554;
+}
+
+.navbar-header__end a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-header__end:hover {
+  background-color: #353d42;
+}
+.navbar-header__end a:hover {
+  text-decoration: none;
+  color: white;
+}
+@media only screen and (max-width: 991px) {
+  .navbar-nav {
+    width: 100%;
+  }
+  /* .navbar-nav > .nav-item {
+    text-align: center;
+    padding: 10px 0px;
+  } */
+  .navbar-header__end {
+    display: none;
+  }
+}
+
+.nav-text-login {
+  text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  text-align: center;
+}
+
+.navbar-header__end:hover {
+  color: white;
+}
+
+.active-applicant {
+  color: #7dd39f !important;
+}

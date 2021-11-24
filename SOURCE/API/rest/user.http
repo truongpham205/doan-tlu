@@ -1,0 +1,42 @@
+@host = {{$dotenv host}}
+# @token = ef40b5f673f25968acd0a3c7d81b21a3
+@token= {{$dotenv token}}
+@contentType = {{$dotenv contentType}}
+
+POST {{host}}/user/api/admin/create
+Content-Type: {{contentType}}
+
+###
+POST {{host}}/user/login
+Content-Type: {{contentType}}
+token: {{token}}
+
+{
+    "user_name": "0999123000",
+    "password": "123456Aa@",
+    "role_id": 2,
+    "device_id": ""
+}
+
+
+###
+GET {{host}}/user/detail
+Content-Type: {{contentType}}
+token: {{token}}
+
+###
+POST {{host}}/user/create
+Content-Type: {{contentType}}
+token: {{token}}
+
+{
+    "full_name": "reviewer",
+    "user_name" : "0987651241",
+    "password" : "123456",
+    "email" : "ngocanha195@gmail.com",
+    "role_id" : 11,
+    "province_id": 2,
+    "address": "Hai Bà Trưng",
+    "dob" : "1998-07-28T00:00:00.000Z",
+    "gender" :  1
+}

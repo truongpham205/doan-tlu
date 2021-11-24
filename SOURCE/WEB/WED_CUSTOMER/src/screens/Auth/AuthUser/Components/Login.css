@@ -1,0 +1,24 @@
+.btn-successs {
+  border-radius: 5px !important;
+  color: #fff !important;
+  background-color: #28a745 !important;
+  text-decoration: none !important;
+}
+.btn-successs:hover {
+  opacity: 0.88;
+}
+
+.forgotPass:hover {
+  color: #28a745 !important;
+}
+
+.btn-dangerr {
+  border-radius: 5px !important;
+  color: #fff !important;
+  background-color: #dd4b39 !important;
+  text-decoration: none !important;
+}
+
+.btn-dangerr:hover {
+  opacity: 0.88;
+}

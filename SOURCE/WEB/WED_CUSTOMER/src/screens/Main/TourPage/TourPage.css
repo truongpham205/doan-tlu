@@ -1,0 +1,138 @@
+/* tour filter */
+.tour-ques {
+  font-size: 18px;
+  /* margin: 50px 10px 0px 10px; */
+  font-weight: 700;
+}
+.tour-filter .tour-filter-title {
+  font-size: 16px;
+  color: #707070;
+}
+
+.tour-filter {
+  border-bottom: 2px solid #d5d5d5;
+  padding: 25px 10px 25px 10px;
+}
+
+.tour-filter ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tour-filter ul li {
+  margin: 18px 15px 18px 15px;
+}
+
+.fa-star {
+  margin-right: 5px;
+}
+.star {
+  color: #ffd500;
+  font-size: 16px;
+}
+
+.checkbox {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.checkbox:focus {
+  box-shadow: none !important;
+}
+
+.type-room {
+  font-size: 16px;
+  padding-left: 15px;
+}
+
+.block-btn-clear-filter {
+  text-align: center;
+  margin-top: 26px;
+}
+
+.btn-clear-filter {
+  border: none !important;
+  border-radius: 50px !important;
+  font-weight: 500 !important;
+  font-size: 17px !important;
+}
+.btn-clear-filter:hover {
+  opacity: 0.9;
+}
+
+.input-search-tour {
+  align-items: center !important;
+  max-width: 85%;
+  border-radius: 50px !important;
+}
+
+.input-search-tour:focus {
+  box-shadow: none !important;
+}
+.tour-item {
+  width: 330px;
+  min-height: 100%;
+  /* height: 363px; */
+}
+.tour-item img {
+  width: 330px;
+  height: 222px;
+  border-radius: 4px 4px 0 0;
+}
+.tour-item:hover {
+  background-color: #0abe35;
+  border-radius: 4px;
+}
+
+.tour_element {
+  color: #0c0c0c;
+  cursor: pointer;
+  margin-top: 0.875rem !important;
+}
+
+.tour-item:hover .sub_tour_element {
+  color: white !important;
+}
+
+.tours_box {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* margin-right: -15px;
+  margin-left: -15px; */
+  /* justify-content: space-between; */
+}
+
+.tour-list_filter {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .input-search-tour {
+    max-width: 60%;
+  }
+  .tour {
+    display: none;
+  }
+  .tour_list_left {
+    padding: 0;
+  }
+  .tour_list_right {
+    padding: 0;
+  }
+  .tour-list_filter {
+    display: inline;
+    text-align: center;
+  }
+  .tour_list_left {
+    display: none;
+  }
+}
+
+@media (max-width: 875px) {
+  .container-header-row {
+    justify-content: center !important;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

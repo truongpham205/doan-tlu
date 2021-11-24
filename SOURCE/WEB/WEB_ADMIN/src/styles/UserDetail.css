@@ -1,0 +1,20 @@
+.ant-image {
+    width: 180px;
+    height: 135px !important;
+}
+
+.img-fluid > img {
+  width: 180px;
+  height: 135px !important;
+  display: inline-block;
+  object-fit: cover;
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  height: auto;
+}
+
+.img-fluid > img:hover{
+    cursor: pointer;
+}

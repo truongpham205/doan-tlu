@@ -1,0 +1,95 @@
+/*
+The loaders use CSS custom properties (variables) to control the attributes of the loaders
+*/
+.loader-container {
+  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: #fff; */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+:root {
+  --loader-width: 50px;
+  --loader-height: 50px;
+  --loader-color-primary: #27ae60;
+  --loader-color-secondary: #eee;
+  --line-width: 3px;
+  --animation-duration: 2s;
+  --loader-initial-scale: 0.1;
+}
+.loader,
+.loader:before,
+.loader:after {
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+/*
+In order to get optimal results, please only change the 
+variables above and don't change anything in the actual loader code
+*/
+
+.loader.awesome-spin {
+  border-radius: 50%;
+  color: var(--loader-color-primary, #33f);
+  border-top: var(--line-width, 10px) solid;
+  border-bottom: var(--line-width, 10px) solid;
+  width: var(--loader-width, 100px);
+  height: var(--loader-height, 100px);
+  animation: awesome-spin var(--animation-duration, 2s) linear infinite;
+}
+
+@keyframes awesome-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-chat-mobile {
+  display: none;
+}
+
+.intro-chat-mobile {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .contacts_card {
+    margin-bottom: 15px !important;
+    height: 300px !important;
+  }
+  .user_img {
+    height: 42px !important;
+    width: 42px !important;
+  }
+  .msg_head {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .icon-chat-desktop {
+    display: none !important;
+  }
+
+  .icon-chat-mobile {
+    display: inline;
+    /* background: #4cd137;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px 4px 0 0; */
+  }
+
+  .intro-chat-mobile {
+    display: block;
+  }
+}

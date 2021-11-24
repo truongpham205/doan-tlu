@@ -1,0 +1,113 @@
+.me-logo {
+  justify-content: initial;
+}
+
+.me-txt-logo {
+  color: white;
+}
+
+.nav-icon {
+  margin-right: 1rem !important;
+}
+
+.me-delete {
+  display: none !important;
+  margin-left: 50px;
+  color: #ced4da;
+  font-size: 15px;
+  float: right;
+  justify-content: initial;
+}
+
+.nav .nav-item {
+  margin-bottom: 0.15rem;
+}
+
+.sidebar .nav-link > p > .nav--icon--item {
+  position: absolute;
+  right: 1rem;
+  top: 0.7rem;
+}
+
+.nav-sidebar > .nav-item .nav-icon {
+  width: 1rem !important;
+}
+/* .nav-tabs .nav-link {
+  border: 1px solid #f4f6f9 !important;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+} */
+.nav-tabs {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.nav__active--link {
+  background-color: #23A0CB !important;
+  border-radius: 5px;
+  /* border-left: 2px solid red; */
+  color: white !important;
+}
+
+.nav-sidebar .nav-sidebar .menu-open > .nav-link i.right {
+  -webkit-transition: transform 0.3s ease-in-out 0s !important;
+  -moz-transition: transform 0.3s ease-in-out 0s !important;
+  transition: transform 0.3s ease-in-out  0s !important;
+}
+
+.nav-sidebar .menu-open > .nav-link i.right {
+  -webkit-transform: rotateZ(-90deg) !important;
+  -moz-transform: rotateZ(-90deg) !important;
+  -ms-transform: rotateZ(-90deg) !important;
+  -o-transform: rotateZ(-90deg) !important;
+  transform: rotateZ(-90deg) !important;
+}
+
+.nav-link-hover {
+  margin-bottom: 0px !important;
+}
+
+.nav-link-hover:hover {
+  background-color: #23A0CB !important;
+  border-radius: 5px;
+}
+
+.main-sidebar {
+  background-color:rgb(32,45,63);
+}
+
+.sidebar{
+  overflow-y:auto !important;
+}
+
+@media (max-width: 992px) {
+  .me-delete {
+    display: inline !important;
+    position: relative;
+    margin-top: -20px;
+  }
+  .sidebar {
+    width: 100%;
+  }
+}
+
+.me-menu-drop {
+  background-color: #70707094;
+  border-radius: 5px;
+}
+
+.me-sub-menu-item {
+  margin-left: 15px;
+}
+[class*='sidebar-dark-'] .sidebar a {
+  /* background-color: #ced4da !important; */
+}
+/* [class*='sidebar-dark-'] .nav-sidebar > .nav-item.menu-open > .nav-link,
+[class*='sidebar-dark-'] .nav-sidebar > .nav-item:hover > .nav-link {
+  background-color: rgba(255,255,255,.3);
+} */
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: white !important;
+  background-color: #23a0cb !important;
+  border-color: #dee2e6 #dee2e6 #fff;
+}

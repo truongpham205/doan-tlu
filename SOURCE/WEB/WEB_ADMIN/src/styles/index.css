@@ -1,0 +1,149 @@
+.container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.content-header {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.see--detail:hover {
+  cursor: pointer;
+}
+
+.content-header h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 490;
+}
+
+.table td,
+.table th {
+  vertical-align: middle !important;
+  border-top: 1px solid #dee2e6;
+}
+
+table > tbody > tr:hover {
+  background-color: #f5f4fa !important;
+}
+table > tbody {
+  vertical-align: middle;
+}
+table > tbody > tr {
+  vertical-align: inherit;
+}
+
+.table--shadow {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); */
+  /* -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2); */
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  -moz-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+
+  /* -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); */
+}
+
+.box--shadow {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  /* box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.07); */
+}
+
+.card--shadow {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* effect for button */
+.btn {
+  transition: transform 0.3s !important;
+}
+
+.btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+/* change color text for button with bg-warning */
+#button {
+  color: white !important;
+}
+
+/* override css bootstrap with different box-shadow attribute */
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  outline: 0;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3) !important;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #007bff !important;
+}
+
+/* customize css for ant-design */
+.ant-image-preview-body > .ant-image-preview-operations {
+  height: 56px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.ant-image-preview-img-wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.react-datepicker-wrapper > .react-datepicker__input-container > .date-picker {
+  height: 38px !important;
+}
+.img--logo {
+  border: 2px dashed grey;
+  border-radius: 3px;
+  text-align: center;
+  height: 20rem !important;
+  padding-top: 0.5rem;
+
+  cursor: pointer;
+}
+
+.fixedThead {
+  position: 'sticky';
+  top: 0;
+  background: 'white';
+  border: '2px solid #dee2e6';
+  box-shadow: 'rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em';
+}
+
+.fixedTable {
+  max-height: 800px;
+  overflow-y: auto;
+}
+.anticon {
+  color: rgba(0, 0, 0, 0.85) !important;
+  margin-bottom: 0.1rem !important;
+  vertical-align: middle !important;
+}
+.ant-pagination-options {
+  display: none !important;
+}
+.ant-pagination {
+  text-align: end !important;
+}
+#test-table-xls-button {
+  color: white !important;
+}

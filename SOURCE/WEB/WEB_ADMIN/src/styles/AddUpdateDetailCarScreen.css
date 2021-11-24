@@ -1,0 +1,28 @@
+.form--description {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #ced4da;
+}
+
+.form--main {
+  height: 50px;
+  padding: 0 !important;
+}
+
+#form--main {
+  vertical-align: top !important;
+}
+
+.form--description:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  /* box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); */
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3) !important;
+}
+
+.fileContainer .uploadPictureContainer {
+  width: 60% !important;
+}

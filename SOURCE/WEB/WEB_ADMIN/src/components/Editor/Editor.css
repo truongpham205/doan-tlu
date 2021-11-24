@@ -1,0 +1,18 @@
+.ql-blank{
+    background-color: white !important;
+}
+.ql-snow{
+    background-color: white !important;
+}
+.ql-container {
+    margin-bottom: 30px !important;
+}
+.ql-editing{
+    right: 100px !important;
+    top: 0px !important;
+    left:680px !important;
+}
+.quill img {
+    width: 300px;
+    height: 200px;
+}

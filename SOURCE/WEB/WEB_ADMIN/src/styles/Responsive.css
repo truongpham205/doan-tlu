@@ -1,0 +1,121 @@
+.responsive--img {
+  margin: 0px 1em;
+}
+/* css for button in addLoanCapitalPack */
+/* .responsive--button__editor{
+  margin-top: 2rem;
+} */
+
+/* override size img of ant design */
+.ant-upload-list-item-list-type-picture-card{
+  width: 146px !important;
+  height: 146px !important;
+}
+
+.ant-upload-list-picture-card-container{
+  width: 146px !important;
+  height: 146px !important;
+}
+
+.ant-upload.ant-upload-select-picture-card {
+  width: 146px !important;
+  height: 146px !important;
+}
+
+
+.ant-image-img{
+  height: 135px !important;
+  width: 180px !important;
+  border-radius: 0.25rem !important;
+  object-fit: cover !important;
+}
+
+.ant-image-img:hover{
+  cursor: pointer;
+}
+
+
+/* responsive */
+
+@media only screen and (max-width: 768px) {
+  .detail__box--value {
+    padding-left: 3rem !important;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .responsive--img {
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 1448px) and (min-width: 768px){
+    .responsive--img {
+        display: block;
+        width: 100%;
+        margin-top: 1em;
+        margin-left: 0px;
+      }
+  }
+
+@media only screen and  (max-width: 576px){
+    .responsive__inputField{
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+    .responsive--box{
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }
+
+  @media only screen and  (max-width: 768px){
+    .responsive--box{
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+    
+    .responsive__inputField-md{
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }
+
+  @media only screen and  (max-width: 992px){
+    .responsive__inputField-lg{
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }
+
+  
+  /* @media only screen and  (max-width: 475px){
+   .responsive--button__editor{
+     margin-top: 6rem;
+   }
+  } */
+
+/* @media only screen and ) {
+    .responsive--img {
+      display: block;
+      width: 100%;
+      margin-top: 1em;
+      margin-left: 0px;
+    }
+  } */
+
+  @media (max-width: 1350px) {
+    .table-responsive-xxl {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .table-responsive-xxl > .table-bordered {
+      border: 0;
+    }
+  }
+  

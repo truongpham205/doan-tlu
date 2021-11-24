@@ -1,0 +1,251 @@
+.user-row {
+  margin-top: 1rem;
+}
+
+.tab-detail {
+  margin-top: 1rem;
+}
+
+.user-tab-left {
+  border-right: 1px solid #e0e0e0;
+}
+
+.user-tab {
+  cursor: pointer;
+  padding: 1rem 1rem;
+}
+
+.user-tab-active {
+  padding: 1rem 1rem;
+  cursor: pointer;
+  color: #0abe35;
+  border-left: 3px solid #0abe35;
+  font-weight: 700px !important;
+}
+
+.user-tab:hover {
+  color: #0abe35;
+  border-left: 3px solid #0abe35;
+  font-weight: 700px !important;
+}
+
+.logout {
+  padding: 1rem 1rem;
+  cursor: pointer;
+  color: red;
+}
+
+.detail-booking {
+  color: #0091ea;
+  cursor: pointer;
+}
+
+.detail-booking:hover {
+  color: #ff3d00;
+}
+
+.table-icon-edit {
+  font-size: 16px;
+  color: #0abe35;
+  border: 2px solid #0abe35;
+  padding: 4px 7px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.table-icon-edit:hover {
+  color: white;
+  background-color: #0abe35;
+}
+
+.table-icon-delete {
+  font-size: 16px;
+  color: red;
+  border: 2px solid red;
+  padding: 4px 9px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.table-icon-delete:hover {
+  color: white;
+  background-color: red;
+}
+
+/* .tab-user-name:hover {
+  color: #0abe35;
+  cursor: pointer;
+} */
+
+.infor-status-tour {
+  background-color: #fff;
+  padding: 30px 30px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.status-tag {
+  background-color: #0abe35;
+  padding: 8px 24px;
+  color: white;
+  position: absolute;
+  top: -20px;
+  left: 16px;
+  border-radius: 3px;
+}
+
+.ant-radio-inner::after {
+  background-color: #0abe35;
+}
+
+.ant-radio-checked .ant-radio-inner {
+  border-color: #0abe35;
+}
+
+.image-upload-icon {
+  font-size: 30px;
+  padding: 50px 90px;
+  background-color: #eee;
+}
+
+.input-image-upload {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.button-submit-member {
+  border: 0;
+  color: white;
+  background-color: #0abe35;
+  margin-top: 7px;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #0abe35 !important;
+  border-color: #0abe35 !important;
+}
+
+.show_detail {
+  color: #0abe35;
+  cursor: pointer;
+}
+
+.ant-space {
+  width: 100% !important;
+}
+
+.ant-picker {
+  width: 100% !important;
+}
+
+.transfer_infor {
+  display: flex;
+  /* justify-content: space-evenly; */
+}
+
+.button-table {
+  display: flex;
+}
+
+.upload-image {
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 210px;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+.image-uploaded {
+  width: 280px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.hightlight {
+  animation: circle 2s;
+  border: 2px red solid;
+  clip-path: circle(100%);
+  padding: 0.5rem;
+  width: 200px;
+  margin-top: 0.3rem;
+}
+
+.title_tab {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.title_info {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+.info_left {
+  border-right: 1px solid;
+}
+
+.deposit_index {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes circle {
+  0% {
+    clip-path: circle(0%);
+  }
+  25% {
+    clip-path: circle(25%);
+  }
+  50% {
+    clip-path: circle(50%);
+  }
+  75% {
+    clip-path: circle(75%);
+  }
+  100% {
+    clip-path: circle(100%);
+  }
+}
+
+@media (max-width: 572px) {
+  /* .tours_box{
+    margin-left: 5px!important;
+  } */
+  .user-tab-left {
+    border-right: none !important;
+  }
+  .user-tab-right {
+    padding-left: 0 !important;
+  }
+  .transfer_infor {
+    display: inline;
+  }
+  .infor-status-tour {
+    padding: 20px 30px;
+  }
+  .button-table {
+    display: none;
+  }
+  .info_left {
+    border-right: none;
+  }
+  .deposit_index {
+    display: block;
+  }
+  .table-icon-edit {
+    padding: 4px 7px;
+  }
+}
+
+@media (max-width: 1092px) {
+  .table-icon-edit {
+    padding: 4px 7px;
+  }
+}

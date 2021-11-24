@@ -1,0 +1,32 @@
+# My Variables
+@contentType = {{$dotenv contentType}}
+@host = {{$dotenv host}}
+# @token = b9b4ebab0a8e54981899cf31cf62fc2b
+@token = af464ee587ca393ed52e6dd35f7db527
+
+
+
+### JOB/EXAM
+POST {{host}}/job/exam
+Content-Type: {{contentType}}
+token: {{token}}
+
+{
+    "id": 8,
+    "name": "câu hỏi dành cho cảnh",
+    "order": 3,
+    "is_active": 1,
+    "result_count": "0",
+    "job_exam_answers": [
+        { "id": 17, "name": "ăn cơm chưa", "order": 1, "result": 0 },
+        { "id": 18, "name": "ăn rồi", "order": 2, "result": 0 },
+        { "name": "ok", "order": 3, "result": 0 }
+    ],
+    "job_id": 41
+}
+
+
+### JOB/DETAIL
+GET {{host}}/job/detail?id=42
+Content-Type: {{contentType}}
+token: {{token}}

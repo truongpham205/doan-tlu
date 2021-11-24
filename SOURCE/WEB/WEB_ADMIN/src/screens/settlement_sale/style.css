@@ -1,0 +1,14 @@
+.settlementSale{
+    margin-right: 2.5rem;    
+}
+
+@media only screen and (max-width: 768px) {
+    .settlementSale{
+        margin-right: 0px;
+        margin-bottom: 5px;
+        display: block;    
+    }
+    .notSettlementSale{
+        display: block;    
+    }
+}

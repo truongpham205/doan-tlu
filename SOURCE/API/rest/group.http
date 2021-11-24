@@ -1,0 +1,76 @@
+# My Variables
+@contentType = {{$dotenv contentType}}
+@host = {{$dotenv host}}
+# @token = b9b4ebab0a8e54981899cf31cf62fc2b
+@token = af464ee587ca393ed52e6dd35f7db527
+
+### Get group customer list
+# @name groups
+GET {{host}}/groupCustomer/list
+token: {{token}}
+
+### simple group list using for filter
+GET {{host}}/groupCustomer/listFilter
+token: {{token}}
+
+
+### Get group detail, with job
+@group_id = {{groups.response.body.data.$[0].id}}
+GET {{host}}/groupCustomer/detail?id={{group_id}}
+Content-Type: {{contentType}}
+token: {{token}}
+
+
+### CREATE group
+
+POST {{host}}/groupCustomer/create
+Content-Type: {{contentType}}
+token: {{token}}
+
+{
+    "name": "Khách hàng mới tháng 10",
+    "description": "khach hang mua xe thang 10",
+    "customer_ids": [
+        8, 13, 14, 15, 19, 16, 17
+    ]
+}
+
+### UPDATE GROUP
+POST {{host}}/groupCustomer/update
+Content-Type: {{contentType}}
+token: {{token}}
+
+{
+    "id": 12,
+    "name": "Khách hàng mới tháng 10",
+    "description": "khach hang mua xe thang 10"
+}
+
+
+### ADD customer to group
+POST {{host}}/groupCustomer/addCustomers
+Content-Type: {{contentType}}
+token: {{token}}
+
+{
+    "id": 12,
+    "customer_ids": [
+        1,
+        2,
+        3,
+    ]
+}
+
+### Remove customer from group
+POST {{host}}/groupCustomer/deleteCustomers
+Content-Type: {{contentType}}
+token: {{token}}
+
+{
+    "id": 12,
+    "customer_ids": [
+        1,
+        2,
+        3,
+    ]
+}

@@ -1,0 +1,294 @@
+.carousel-inner {
+  border-radius: 16px !important;
+}
+
+html {
+  scroll-behavior: smooth!important;
+}
+
+.gallery-room_img {
+  width: 80%;
+}
+
+#gallery-room {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  font-size: 16px;
+  font-style: 500;
+
+  padding-bottom: 21px;
+  padding: 0 !important;
+}
+
+.gallery-item_text {
+  margin-top: 16px;
+}
+
+.location-title_text {
+  /* font-size: 24px; */
+  font-weight: bold;
+
+  text-align: center;
+  /* margin-top: 30px; */
+}
+
+.gallery-location {
+  height: auto;
+  overflow: auto;
+}
+
+.gallery-list {
+  display: flex;
+  /* justify-content: space-between; */
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0rem;
+  cursor: pointer;
+}
+
+.location-item {
+  /* width: 350px; */
+  height: 410px;
+  border-radius: 16px;
+  /* margin-right: 10px; */
+}
+/* 
+.tourFavourite {
+  margin-top: 40px;
+} */
+
+/* mobile scroll location */
+.msg_panel {
+  width: 100px;
+  height: 45px;
+  max-height: 200px;
+  padding: 3px;
+  overflow-x: auto;
+  /* overflow-x: hidden; */
+}
+
+.text-image {
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-top: 100%;
+}
+
+.text-in_image {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding-top: 50%;
+  display: none;
+}
+
+.location-item:hover .text-in_image {
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.6) !important;
+  border-radius: 16px;
+  display: block;
+}
+
+/* review  tour*/
+/* .review-tour {
+  margin-top: 80px;
+} */
+.review-list {
+  display: flex;
+  list-style: none;
+}
+
+.review-block ul {
+  display: flex;
+  list-style: none;
+}
+
+.review-block li {
+  margin: 0 25px 0 25px;
+}
+
+.reivew-item {
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+.review-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+
+.review-control {
+  font-size: 35px;
+  list-style: none;
+}
+
+.review-title {
+  font-size: 22px;
+  font-weight: 500;
+
+  margin: 15px 20px 0 20px;
+
+  /* overflow */
+  max-width: 420px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#gallery-button {
+  display: none;
+}
+
+.div-mobile {
+  border: 1px solid #0abe35;
+  border-radius: 10px;
+
+  color: #0abe35;
+  line-height: 42px;
+
+  font-size: 15px;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  width: 160px;
+  height: 42px;
+
+  flex: 1;
+
+  margin: 10px;
+  padding: auto;
+}
+
+.div-mobile:hover {
+  cursor: pointer;
+  background-color: #0abe35;
+  color: #fff;
+}
+
+.banner-image {
+  height: 400px;
+  object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+  #gallery-button {
+    display: inline !important;
+  }
+  #gallery-room {
+    display: none !important;
+  }
+
+  .location-item {
+    max-width: 140px;
+    max-height: 200px;
+  }
+
+  .gallery-room_img {
+    max-width: 140px;
+    max-height: 200px;
+  }
+
+  .location-title_text {
+    font-size: 13px;
+    font-weight: bold;
+
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .text-in_image {
+    font-size: 13px;
+    border-radius: 8px;
+  }
+
+  .text-image {
+    font-size: 13px;
+  }
+
+  .gallery-location {
+    max-width: 767px !important;
+    max-height: auto;
+    overflow: auto;
+  }
+}
+
+.alice-carousel__stage-item {
+  text-align: center !important;
+}
+
+.gallery-item_text {
+  color: black !important;
+}
+
+@media (min-width: 1024px) {
+  .alice-carousel__stage-item {
+    padding-right: 10px !important;
+  }
+}
+
+/* Dành cho điện thoại */
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .image-review-tour {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
+/* Dành cho máy tính bảng chiều dọc */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .location-item {
+    width: 200px;
+    height: 300px;
+  }
+
+  .image-review-tour {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
+/* Dành cho máy tính bảng chiều ngang */
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+}
+
+/* Dành cho màn hình desktop */
+@media screen and (min-width: 1280px) {
+  .location-item {
+    width: 350px;
+    height: 410px;
+    border-radius: 16px;
+    /* margin-right: 10px; */
+  }
+
+  .image-review-tour {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .body_fluid{
+    width: 80%!important;
+    margin: auto!important;
+  }
+}

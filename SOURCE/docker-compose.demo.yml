@@ -1,0 +1,87 @@
+version: "3.7"
+x-restart-policy: &restart-policy
+  restart: always
+x-default-env-file: &env-file
+  env_file:
+    - .env
+
+services:
+  database:
+    <<: *restart-policy
+    <<: *env-file
+    image: mysql:8.0.22
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - ${MYSQL_PORT}:3306
+    volumes:
+      - ./DB/conf.d/:/etc/mysql/conf.d/
+      - ./DB/init:/docker-entrypoint-initdb.d
+      #- ./DB/data:/var/lib/mysql
+  api:
+    <<: *restart-policy
+    <<: *env-file
+    build: ./API
+    depends_on:
+      - database
+    environment:
+      - NODE_ENV=production
+      - PORT=8700
+      - WAIT_HOSTS=database:3306
+      - DB_HOST=database
+      - DB_PORT=3306
+      - DB_USER=${MYSQL_USER}
+      - DB_PASSWORD=${MYSQL_PASSWORD}
+      - SECRET=${SECRET}
+      - DB_NAME=tacn
+    expose:
+      - 8700
+    ports:
+      - 8700:8700
+    volumes:
+      - ./API/public/upload:/app/dist/upload
+    # links:
+    #   - tacn_db
+    networks:
+      - mynet
+    command: yarn start
+  web_customer:
+    image: node:10-alpine
+    container_name: booking_build
+    command: "sh -c 'mkdir build && yarn install && yarn build'"
+
+    # command: "sh -c 'ls && yarn install && yarn start'"
+
+    volumes:
+      - ./WEB/WED_CUSTOMER:/app
+    working_dir: /app
+    networks:
+      - mynet
+  web_admin:
+    image: node:10-alpine
+    container_name: booking_admin
+    command: "sh -c 'mkdir build && yarn install && yarn build'"
+    
+    volumes:
+      - ./WEB/WEB_ADMIN:/app
+    working_dir: /app
+      networks:
+        - mynet
+  nginx:
+    image: nginx:1.15.2-alpine
+    container_name: booking_nginx
+    depends_on:
+      - web_customer
+      - web_admin
+    volumes:
+      - ./WEB/WED_CUSTOMER/build:/var/www/customer
+      - ./WEB/WED_ADMIN/build:/var/www/admin
+      - ./nginx/default.conf:/etc/nginx/nginx.conf
+    ports:
+      - 3333:80
+      - 7777:8080
+    networks:
+      - mynet
+
+networks:
+  mynet:
+    driver: bridge

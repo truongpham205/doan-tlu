@@ -1,0 +1,10 @@
+[defaults]
+project=tele-api
+org=windsoft
+url=http://sentry.winds.vn/
+
+[auth]
+token=fe6f613b9f6d401a8bd9e1d369d823c9af37bf71f6f34408a06016352c3c5ffc
+
+[log]
+level=info

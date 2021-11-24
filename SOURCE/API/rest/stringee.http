@@ -1,0 +1,9 @@
+
+# My Variables
+@contentType = {{$dotenv contentType}}
+@host = {{$dotenv host}}
+# @token = b9b4ebab0a8e54981899cf31cf62fc2b
+@token = af464ee587ca393ed52e6dd35f7db527
+
+
+GET {{host}}/api/stringee/project_answer_url?from=call_152&to=84337265095&fromInternal=true&userId=0965520000&projectId=5985&custom=&callId=call-vn-1-73JJ5R8BMN-1606411536711&videocall=false

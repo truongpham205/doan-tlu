@@ -1,0 +1,22 @@
+/* override size img when upload  */
+.uploadPictureContainer {
+  padding: 0 !important;
+}
+
+.fileContainer .uploadPictureContainer {
+  width: 40% !important;
+}
+
+.uploadPictureContainer .deleteImage {
+  background-color: white !important;
+  border: 1px solid #ccc !important;
+  font-weight: 0 !important;
+  color: black !important;
+  font-size: 13px !important;
+  top: -15px;
+  right: -10px;
+}
+.uploadPictureContainer img {
+  width: 200px !important;
+  height: auto !important;
+}

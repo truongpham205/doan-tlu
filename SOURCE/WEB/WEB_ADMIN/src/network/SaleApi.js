@@ -1,0 +1,12 @@
+import { ApiClient } from 'constants/Api'
+export const createSale = (payload) => ApiClient.post('/sale/create', payload)
+export const updateSale = (payload) => ApiClient.post('/sale/update', payload)
+export const getListSale = (payload) => ApiClient.get('/sale/list', payload)
+export const getSaleDetail = (payload) => ApiClient.get('/sale/detail', payload)
+export const deleteSale = (payload) => ApiClient.post('/sale/deleteSale', payload)
+export const deleteSalary = (payload) => ApiClient.post('/sale/deleteSalary', payload)
+export const getListSalary = (payload) => ApiClient.get('/sale/getListSalary', payload)
+export const createSalary = (payload) => ApiClient.post('/sale/createSalary', payload)
+export const updatePayment = (payload) => ApiClient.post('/sale/updatePayment', payload)
+export const getSalaryDetail = (payload) => ApiClient.get('/sale/getsalaryDetail', payload)
+export const getListOrder = (payload) => ApiClient.get('/sale/listOrder', payload)

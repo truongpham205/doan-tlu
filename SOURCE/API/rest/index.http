@@ -1,0 +1,6 @@
+# My Variables
+@contentType = {{$dotenv contentType}}
+@host = {{$dotenv host}}
+
+
+GET {{host}}/

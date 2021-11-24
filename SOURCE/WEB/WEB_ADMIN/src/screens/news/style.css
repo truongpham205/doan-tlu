@@ -1,0 +1,22 @@
+
+.label--input__news{
+    text-align: center;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .label--input__news{
+        text-align: start;
+    }
+    .input__news{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .input--text__news{
+        padding-left: 0.25rem !important;
+        padding-right: 0.25rem !important;
+    }
+  }
+  

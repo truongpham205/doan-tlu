@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* html {
+  scroll-behavior: smooth;
+} */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 4px;
+}
+
+.MuiButton-label {
+  text-transform: none;
+}
+
+.text-card {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.content-card {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.swiper-button-prev {
+  display: none !important;
+}
+
+.swiper-button-next {
+  display: none !important;
+}
+
+.icon-card {
+  font-size: 1.2rem !important;
+  margin-bottom: 0.4rem;
+}
+
+.ant-image-preview-wrap {
+  z-index: 1400 !important;
+}
+
+.pagination {
+  justify-content: center !important;
+}
+
+@media (max-width: 480px) {
+  .ant-picker-panels {
+    display: block !important;
+    width: 100% !important;
+  }
+  .ant-picker-date-panel {
+    width: 100% !important;
+  }
+
+  .ant-picker-content {
+    width: 100% !important;
+  }
+}
+
+/* .MuiCardHeader-root {
+  min-height: 9rem !important;
+} */
+
+/* @media (max-width: 960px) {
+  .MuiContainer-maxWidthMd {
+    max-width: 1144px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .MuiContainer-maxWidthMd {
+    max-width: 1444px !important;
+  }
+} */

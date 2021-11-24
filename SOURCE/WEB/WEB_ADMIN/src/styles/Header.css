@@ -1,0 +1,116 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  width: 100%;
+}
+/* .main-header{
+  height: 57px;
+} */
+.top-bar {
+  height: 50px;
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.top-bar-item {
+  color: #fff;
+  display: inline-block;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  width: 200px;
+}
+
+.img--avatar {
+  /* box */
+  width: 2.6em;
+  height: 2.6em;
+  border-radius: 50px;
+
+  /* color */
+}
+.right-size {
+  height: 100%;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 15px;
+}
+
+button {
+  color: #fff !important;
+}
+.user-button {
+  text-decoration: none !important;
+}
+
+/* .me-txt-admin-drop {
+  color: black;
+} */
+
+.cursor {
+  cursor: pointer;
+}
+
+.menu-hover:hover {
+  background-color: #dadde1 !important;
+}
+.nav-header > .nav-header__item{
+  list-style: none;
+  float: right;
+  padding: 6px 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.nav-header > .nav-header__item:nth-child(3){
+  margin-right: 2%;
+}
+.nav-header > .nav-header__item:nth-child(2){
+  margin-right: 2%;
+}
+@media only screen and (max-width:745px){
+  .nav-header > .nav-header__item{
+    display: block;
+    float: none;
+    padding: 0px;
+  }
+}
+/* code a sy */
+.icon--bell {
+  font-size: 1.7em;
+  color: rgb(146, 146, 146);
+}
+
+/* .icon--bell:hover {
+  color: #cfab28;
+} */
+
+.icon--bars {
+  font-size: 1em;
+}
+
+.dropdown--admin__item {
+  align-items: center;
+}
+
+.header--menu__icon {
+  color: #929292;
+}
+.me-txt-user {
+  font-size: medium;
+  font-weight: 600;
+}
+
+.me-txt-admin-drop {
+  color: black;
+  /* color: rgba(0,0,0,.5); */
+  font-size: 14px;
+}

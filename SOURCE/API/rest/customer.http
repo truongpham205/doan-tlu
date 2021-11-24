@@ -1,0 +1,93 @@
+# My Variables
+@contentType = {{$dotenv contentType}}
+@host = {{$dotenv host}}
+@token = {{$dotenv token}}
+@enterprise_id=24
+@customer_id=69
+
+### CUSTOMER FILTER list
+# @name filters
+GET {{host}}/customer/customerFilters?enterprise_id=60
+Content-Type: {{contentType}}
+token: {{token}}
+
+
+### FIELDS list
+# @name filters
+GET {{host}}/customer/customerFields?enterprise_id=60
+Content-Type: {{contentType}}
+token: {{token}}
+
+### FORM INSERT list
+# @name filters
+GET {{host}}/customer/formInsertSchema?enterprise_id=60
+Content-Type: {{contentType}}
+token: {{token}}
+
+
+### SEARCH FILTER OPTION
+# @name filters
+GET {{host}}/customer/filterOptions?enterprise_id=60&field=vehicle_name&query=a
+Content-Type: {{contentType}}
+token: {{token}}
+
+
+### CUSTOMER FILTER list
+POST {{host}}/customer/importTemplate
+Content-Type: {{contentType}}
+token: {{token}}
+
+### CUSTOMER FILTER list
+GET {{host}}/customer/list
+  ?customer_source=customer_source_2
+Content-Type: {{contentType}}
+token: {{token}}
+
+
+
+### CUSTOMER DETAIL
+GET {{host}}/customer/detail?id={{customer_id}}
+Content-Type: {{contentType}}
+token: {{token}}
+
+
+###
+### [CUSTOMERVEHICLE]
+###
+
+### CUSTOMER VEHICLE DETAILS
+GET {{host}}/customer/customerVehicles
+  ?enterprise_id={{enterprise_id}}
+  &customer_id={{customer_id}}
+Content-Type:  {{contentType}}
+token: {{token}}
+
+
+### CUSTOMER VEHICLE DETAILS
+GET {{host}}/customer/customerVehicles
+  ?enterprise_id={{enterprise_id}}
+  &customer_id={{customer_id}}
+Content-Type:  {{contentType}}
+token: {{token}}
+
+
+### ADD_CUSTOMERS VEHICLE
+# 30A-56327
+POST {{host}}/customer/customerVehicle
+Content-Type:  {{contentType}}
+token: {{token}}
+
+{
+  "enterprise_id": 24,
+  "customer_id": 69,
+  "vehicle_id": 9,
+  "payload": {
+    "verhicle_license_plate": "31asfads0A"
+  }
+}
+
+### customer detail SCHEMA
+GET {{host}}/customer/customerDetailSchema
+  ?enterprise_id={{enterprise_id}}
+Content-Type:  {{contentType}}
+token: {{token}}

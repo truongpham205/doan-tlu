@@ -1,0 +1,8 @@
+# My Variables
+@contentType = {{$dotenv contentType}}
+@host = {{$dotenv host}}
+@token = 5380763be5bade84314364390ca4de15
+
+POST {{host}}/admin/createEnterprise
+Content-Type: {{contentType}}
+token: {{token}}

@@ -1,0 +1,31 @@
+
+.btn--header{
+  text-align: right;
+}
+
+.img--logo{
+  border: 2px dashed grey;
+  border-radius: 3px;
+  text-align: center;
+  height: 12rem;
+  padding-top: 0.5rem;
+
+  cursor: pointer;
+}
+
+.upload-icon{
+  color: rgba(0,0,0,.305);
+  font-size: 100px;
+  display: block;
+  margin-top: 20px;
+
+  margin-bottom: -15px;
+}
+
+
+@media only screen and (max-width: 576px) {
+  .btn--header {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+}

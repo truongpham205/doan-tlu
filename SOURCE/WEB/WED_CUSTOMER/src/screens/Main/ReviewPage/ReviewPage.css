@@ -1,0 +1,216 @@
+/* banner image */
+.review-detail_block {
+  margin-bottom: 60px;
+  margin-left: 30px;
+}
+
+.review-page_title {
+  font-size: 36px;
+  font-weight: bold;
+
+  color: white;
+
+  margin-top: -100px;
+}
+
+.review-info {
+  font-size: 18px;
+
+  color: white;
+  align-items: center;
+}
+
+/* content */
+.review-content {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.review-content_text {
+  font-size: 20px;
+}
+
+.content-source {
+  font-size: 20px;
+  font-weight: 600;
+
+  text-align: right;
+
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+/* sharing review */
+.review-similar_text {
+  font-size: 28px;
+  font-weight: bold;
+
+  text-align: left;
+  margin-top: 30px;
+}
+
+.sharing-block {
+  border-top: 2px solid #efeeee;
+  border-bottom: 2px solid #efeeee;
+
+  font-size: 20px;
+
+  padding: 10px;
+  margin: 0 10px 0 10px;
+
+  align-items: center;
+}
+
+.sharing-block ul li {
+  padding: 5px;
+
+  margin: 0 10px 0 10px;
+  width: 27px;
+  height: 27px;
+}
+
+.share-item {
+  align-items: center;
+}
+/* comment review */
+.review-comment {
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.review-up_button {
+  margin-top: 5px;
+
+  width: 130px;
+}
+
+.input-comment:focus {
+  box-shadow: none !important;
+}
+
+.review-up_button:hover {
+  opacity: 0.9;
+}
+
+.review-up_button:focus {
+  box-shadow: none !important;
+}
+
+.review-comment-history {
+  margin-top: 50px;
+}
+
+.review-comment-history-item {
+  margin-top: 30px;
+}
+
+.review-comment-history-item img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50px;
+}
+
+.load-more {
+  text-align: center;
+  font-size: 18px;
+
+  margin-top: 50px;
+
+  color: #0c0c0c;
+}
+
+.list-care {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-care li {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.care-title_text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.list-care-item img {
+  width: 450px;
+  height: 225px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.list-care-block {
+  margin-bottom: 90px;
+}
+
+.list-care-home img {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 10px;
+  object-fit: cover;
+
+  margin-left: 15px;
+}
+
+.home-item_title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.home-item_content {
+  font-size: 16px;
+  color: #707070;
+  max-height: 72px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tour_care_item {
+  margin-top: 0.7rem;
+  cursor: pointer;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.tour_care_item:hover {
+  background-color: #0abe35;
+}
+
+.tour_care_item:hover .tour_care_text {
+  color: #fff!important;
+}
+
+.tour_care_image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.tour_care_text {
+  font-size: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .review-comment {
+    width: 100%;
+    margin: 0;
+  }
+  /* .container-header {
+    width: 100%;
+    margin: 0;
+  } */
+  .review-content {
+    width: 100%;
+    margin: 0;
+  }
+}

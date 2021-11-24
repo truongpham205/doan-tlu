@@ -1,0 +1,68 @@
+.footer-menu_text {
+  /* font-size: 22px; */
+  font-weight: bold;
+}
+
+.about-me_list {
+  list-style: none;
+  margin-top: 20px;
+  /* font-size: 22px; */
+}
+
+#menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#menu-payment li {
+  display: inline-block;
+}
+
+.footer_element {
+  padding: 0 !important;
+}
+
+.footer_fluid {
+  position: sticky;
+  top: 100%;
+}
+
+.footer-container {
+  margin-top: 5rem;
+  background-color: #424242;
+  padding: 1rem 0 5rem 0;
+  color: #fff;
+  position: sticky;
+  top: 100%;
+}
+
+.link-footer {
+  color: #fff;
+  font-size: 14px;
+}
+
+.link-footer:hover {
+  color: #51ff00;
+}
+
+.about-item {
+  margin-bottom: 0.5rem;
+}
+
+.about-item:hover {
+  color: #51ff00;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1280px) {
+  .footer_fluid {
+    width: 74% !important;
+    margin: auto !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer-container {
+    padding: 0.5rem!important;
+  }
+}
