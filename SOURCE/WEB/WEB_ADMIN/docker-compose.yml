@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  node: 
+    image: node:10-alpine
+    container_name: node
+    command: "sh -c 'ls && yarn install && yarn build'"
+
+    # command: "sh -c 'ls && yarn install && yarn start'"
+    # ports:
+    #   - 8338:3000
+    
+    volumes:
+      - .:/app
+    working_dir: /app
+ 
+  nginx: 
+    image: nginx:1.15.2-alpine
+    container_name: web_admin
+    depends_on : 
+      - node
+    volumes:
+      - ./build:/var/www
+      - ./nginx/default.conf:/etc/nginx/nginx.conf
+    ports:
+      - 3333:80

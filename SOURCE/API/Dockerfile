@@ -4,13 +4,14 @@ WORKDIR /app
 
 COPY package.json package.json
 COPY yarn.lock yarn.lock
-
-RUN yarn install
-
+RUN yarn
 COPY . .
-VOLUME [ "/app/public/upload" ]
+# RUN yarn
+RUN yarn build
 
-EXPOSE 3000
-EXPOSE ${PORT}
+# THE LIFE SAVER
+# ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+# RUN chmod +x /wait
 
-CMD ["yarn", "dockerstart"]
+# Launch the wait tool and then your application
+# CMD yarn start

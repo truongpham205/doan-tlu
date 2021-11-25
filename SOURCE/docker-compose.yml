@@ -1,4 +1,5 @@
-version: '3.7'
+version: "3.8"
+
 x-restart-policy: &restart-policy
   restart: always
 x-default-env-file: &env-file
@@ -6,78 +7,56 @@ x-default-env-file: &env-file
     - .env
 
 services:
-  database:
-    <<: *restart-policy
-    <<: *env-file
-    image: mysql:8.0.22
+  ohotour_db:
+    container_name: ohotour_db
     command: --default-authentication-plugin=mysql_native_password
+    # cấu hình vị trí file Dockerfile để build
+    build:
+      context: ./DB
+      dockerfile: Dockerfile
     ports:
-      - ${MYSQL_PORT}:3306
+      - 8667:3306
     volumes:
-      - ./DB/conf.d/:/etc/mysql/conf.d/
-      - ./DB/init:/docker-entrypoint-initdb.d
+      # cau hinh mysql (phan biet hoa thường, ký tự tiếng việt....)
+      - "./DB/conf.d/custom.cnf:/etc/mysql/conf.d/custom.cnf"
+      #luu du lieu ra folder data cua may host
       - ./DB/data:/var/lib/mysql
-  api:
-    <<: *restart-policy
-    <<: *env-file
+      # du lieu mac dinh khi khoi tao container (import tu file .sql)
+      - ./DB/init:/docker-entrypoint-initdb.d
+    networks:
+      - mynet
+
+  ohotour_server:
     build: ./API
     depends_on:
-      - database
+      - ohotour_db
     environment:
       - NODE_ENV=production
       - PORT=8700
-      - WAIT_HOSTS=database:3306
-      - DB_HOST=${MYSQL_HOST}
-      - DB_PORT=${MYSQL_PORT}
+      - WAIT_HOSTS=ohotour_db:3306
+      - DB_HOST=ohotour_db
+      - DB_PORT=3306
       - DB_USER=${MYSQL_USER}
       - DB_PASSWORD=${MYSQL_PASSWORD}
       - SECRET=${SECRET}
-      - DB_NAME=${MYSQL_DATABASE}
-    expose:
-      - 8700
+      - DB_NAME=tacn
     ports:
       - 8700:8700
     volumes:
-      - ./API/public/upload:/app/dist/upload
+      - ./API/dist/uploads:/app/dist/uploads
     networks:
       - mynet
     command: yarn start
-  web_customer:
-    image: node:10-alpine
-    container_name: booking_customer
-    command: "sh -c 'yarn install && yarn build'"
 
-    # command: "sh -c 'ls && yarn install && yarn start'"
-
-    volumes:
-      - ./WEB/WED_CUSTOMER:/app/customer
-    working_dir: /app/customer
-    networks:
-      - mynet
-  web_admin:
-    image: node:12.22.0-alpine3.12
-    container_name: booking_admin
+  web:
+    container_name: ohotour_web_admin
+    build:
+      context: ./WEB/WEB_ADMIN
+      dockerfile: Dockerfile
     depends_on:
-      - web_customer
-    command: "sh -c 'yarn install && node --max_old_space_size=4096 node_modules/.bin/react-scripts build'"
-    volumes:
-      - ./WEB/WEB_ADMIN:/app/admin
-    working_dir: /app/admin
-    networks:
-      - mynet
-  nginx:
-    image: nginx:1.15.2-alpine
-    container_name: booking_nginx
-    depends_on:
-      - web_customer
-      - web_admin
-    volumes:
-      - ./WEB/WED_CUSTOMER/build:/var/www/customer
-      - ./WEB/WEB_ADMIN/build:/var/www/admin
-      - ./nginx/default.conf:/etc/nginx/nginx.conf
+      - ohotour_server
     ports:
       - 3333:80
-      - 7777:8080
     networks:
       - mynet
 networks:
