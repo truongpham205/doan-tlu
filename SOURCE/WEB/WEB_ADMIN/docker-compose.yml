@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   node: 
-    image: node:10-alpine
+    image: node:12-alpine
     container_name: node
     command: "sh -c 'ls && yarn install && yarn build'"
 

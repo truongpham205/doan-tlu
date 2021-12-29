@@ -199,7 +199,8 @@ const STATUS_SHOW_BUTTON_PAYMENT = [6]
 
 // const SOCKET_URL = 'http://3.1.13.10:3211'
 // const SOCKET_URL = 'http://167.71.216.137:3211/socketio?product=1232'
-const SOCKET_URL = process.env.REACT_APP_SOCKET_ENDPOINT_API
+const SOCKET_URL = 'http://167.71.216.137:3211'
+// const SOCKET_URL = process.env.REACT_APP_SOCKET_ENDPOINT_API
 
 const CHAT_STATUS = {
   SALE_LEADER_CONFIRMED: 1,

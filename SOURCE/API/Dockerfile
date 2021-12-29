@@ -1,17 +1,17 @@
-FROM node:12.19.0-alpine
+FROM node:12.20.0
+
+# RUN apk update && \
+#     apk add --no-cache tzdata
+# ENV TZ=Asia/Ho_Chi_Minh
+# RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 WORKDIR /app
 
 COPY package.json package.json
 COPY yarn.lock yarn.lock
-RUN yarn
+
+RUN yarn install
+
 COPY . .
-# RUN yarn
-RUN yarn build
 
-# THE LIFE SAVER
-# ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
-# RUN chmod +x /wait
-
-# Launch the wait tool and then your application
-# CMD yarn start
+CMD ["yarn", "start"]

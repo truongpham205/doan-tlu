@@ -7,7 +7,8 @@ import { ROUTER } from '@constants/Constant'
 // const URL = 'http://3.1.13.10:18921/'
 // const URL = 'http://35.198.255.245:8765/'
 // const URL = 'http://3.1.13.10:8765/'
-const URL = process.env.REACT_APP_API_ENDPOINT;
+const URL = 'http://localhost:8700/';
+// const URL = process.env.REACT_APP_API_ENDPOINT;
 
 console.log(URL)
 
@@ -72,7 +73,7 @@ const handleResult = (api) => {
 const getAxios = createAxios()
 
 const handleUrl = (url, query) => {
-  return queryString.stringifyUrl({ url: url, query}, {arrayFormat: 'comma'})
+  return queryString.stringifyUrl({ url: url, query }, { arrayFormat: 'comma' })
 }
 
 export const ApiClient = {

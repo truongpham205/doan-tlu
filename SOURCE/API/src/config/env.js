@@ -11,7 +11,7 @@ const env = {
   database: process.env.DB_NAME || 'televimer',
   port: process.env.DB_PORT || 3306,
 };
-console.log(env);
+console.log(process.env);
 const sequelize = new Sequelize(env.database, env.user, env.password, {
   host: env.host,
   port: env.port,

@@ -4,10 +4,12 @@ import queryString from 'query-string'
 import Url from './Url'
 import swal from 'sweetalert'
 const Reactotron = process.env.NODE_ENV !== 'production' && require('reactotron-react-js').default
-const END_POINT_REAL_TIME = process.env.REACT_APP_END_POINT_REAL_TIME
+const END_POINT_REAL_TIME = 'http://167.71.216.137:3211'
+// const END_POINT_REAL_TIME = process.env.REACT_APP_END_POINT_REAL_TIME
 function createAxios() {
   var axiosInstant = axios.create()
-  axiosInstant.defaults.baseURL = process.env.REACT_APP_END_POINT
+  axiosInstant.defaults.baseURL = 'http://localhost:8700/'
+  // axiosInstant.defaults.baseURL = process.env.REACT_APP_END_POINT
   axiosInstant.defaults.timeout = 20000
   axiosInstant.defaults.headers = { 'Content-Type': 'application/json' }
   axiosInstant.defaults.headers = { 'access-control-allow-origin': '*' }
@@ -40,7 +42,7 @@ function createAxios() {
         }, 300)
       return response
     },
-    (error) => {}
+    (error) => { }
   )
   return axiosInstant
 }

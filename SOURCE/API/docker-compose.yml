@@ -1,0 +1,23 @@
+version: "3.8"
+
+x-restart-policy: &restart-policy
+  restart: always
+x-default-env-file: &env-file
+  env_file:
+    - .env
+
+services:
+  ohotour_server:
+    build: ./
+    environment:
+      - .env
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - ./API/dist/uploads:/app/dist/uploads
+    networks:
+      - mynet
+    command: yarn start
+networks:
+  mynet:
+    driver: bridge

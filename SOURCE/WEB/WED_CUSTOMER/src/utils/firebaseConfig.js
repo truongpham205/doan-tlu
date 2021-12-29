@@ -102,7 +102,7 @@ class Fire {
 
   init = () => {
     var __DEV__ = !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
-    var firebaseConfig = __DEV__ ? FIREBASE_CONFIG.DEV : FIREBASE_CONFIG.RELEASE
+    var firebaseConfig = FIREBASE_CONFIG.RELEASE
 
     if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig)
